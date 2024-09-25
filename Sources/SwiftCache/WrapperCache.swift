@@ -2,7 +2,7 @@
 // https://docs.swift.org/swift-book
 import Foundation
 
-public struct SwiftCache<KeyType, ObjectType> where KeyType: AnyObject, ObjectType: AnyObject {
+public struct WrapperCache<KeyType, ObjectType> where KeyType: AnyObject, ObjectType: AnyObject {
     private let cache = NSCache<KeyType, ObjectType>()
     
     public func getCachedObject(at key: KeyType) -> ObjectType? {

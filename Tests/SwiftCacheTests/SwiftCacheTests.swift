@@ -3,10 +3,10 @@ import Testing
 @testable import SwiftCache
 
 struct SwiftCacheTests {
-    var cache: SwiftCache<NSString, NSNumber>!
+    var cache: WrapperCache<NSString, NSNumber>!
     
     init() throws {
-        cache = SwiftCache()
+        cache = WrapperCache()
         cache.setCachedObject(1, for: "1")
     }
     

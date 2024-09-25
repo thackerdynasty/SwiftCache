@@ -7,10 +7,10 @@
 import Foundation
 
 public struct UnsafeCache {
-    private let cache: SwiftCache<AnyObject, AnyObject>
+    private let cache: WrapperCache<AnyObject, AnyObject>
     
     public init() {
-        cache = SwiftCache()
+        cache = WrapperCache()
     }
     
     public func setObject(_ object: AnyObject, forKey key: AnyObject) {
