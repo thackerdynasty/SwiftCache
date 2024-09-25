@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'NativeCache'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'An alternative to NSCache for swift!.'
   s.homepage         = 'https://github.com/thackerdynasty/SwiftCache'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
