@@ -1,6 +1,23 @@
+import Foundation
 import Testing
 @testable import SwiftCache
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+struct SwiftCacheTests {
+    var cache: SwiftCache<NSString, NSNumber>!
+    
+    init() throws {
+        cache = SwiftCache()
+        cache.setCachedObject(1, for: "1")
+    }
+    
+    @Test func getObject() throws {
+        let num = cache.getCachedObject(at: "1")
+        #expect(num == 1)
+    }
+    
+    @Test func setObject() throws {
+        cache.setCachedObject(2, for: "2")
+        let num = cache.getCachedObject(at: "2")
+        #expect(num == 2)
+    }
 }
