@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct Cache<KeyType: Hashable, ObjectType> {
+public struct Cache<KeyType: Hashable, ObjectType> {
     var cache: Dictionary<KeyType, ObjectType>
     
     public init() {
