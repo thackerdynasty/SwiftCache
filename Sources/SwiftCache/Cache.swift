@@ -28,4 +28,9 @@ public struct Cache<KeyType: Hashable, ObjectType> {
     public func object(forKey key: KeyType) -> ObjectType? {
         cache[key]
     }
+    
+    /// Clears the cache.
+    public mutating func clear() {
+        cache.removeAll()
+    }
 }

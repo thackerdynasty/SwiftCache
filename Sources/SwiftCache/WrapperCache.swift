@@ -2,9 +2,11 @@
 // https://docs.swift.org/swift-book
 import Foundation
 
+/// Use only if NSCache functionality is required.
 @available(*, deprecated, renamed: "Cache")
 public struct WrapperCache<KeyType, ObjectType> where KeyType: AnyObject, ObjectType: AnyObject {
-    private let cache = NSCache<KeyType, ObjectType>()
+    /// The underlying wrapped NSCache
+    public let cache = NSCache<KeyType, ObjectType>()
     
     /// Gets an object from the cache.
     /// - Parameters:
