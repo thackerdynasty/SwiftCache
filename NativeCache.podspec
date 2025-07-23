@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Quick Bird' => 'mascot@quickbirdstudios.com' }
   s.source           = { :git => 'https://github.com/thackerdynasty/SwiftCache.git', :tag => s.version.to_s }
   s.swift_version = '6.0'
-  s.ios.deployment_target = '16.0'
-  s.macos.deployment_target = '13.0'
+  s.ios.deployment_target = '13.0'
+  s.macos.deployment_target = '10.15'
   s.source_files = 'Sources/SwiftCache/**/*'
 end

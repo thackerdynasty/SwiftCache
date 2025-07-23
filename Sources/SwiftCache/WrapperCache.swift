@@ -2,8 +2,10 @@
 // https://docs.swift.org/swift-book
 import Foundation
 
+/// This class is only kept for the users that need the full capabilities of `NSCache`.
+/// Migrate to `Cache` as soon as possible.
 /// Use only if NSCache functionality is required.
-@available(*, deprecated, renamed: "Cache")
+@available(*, deprecated, message: "Use Cache instead. This will be removed in version 2.0 of SwiftCache.")
 public struct WrapperCache<KeyType, ObjectType> where KeyType: AnyObject, ObjectType: AnyObject {
     /// The underlying wrapped NSCache
     public let cache = NSCache<KeyType, ObjectType>()

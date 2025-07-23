@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "998124BD-F262-4455-9190-D66492929369",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "SwiftCacheTests",
+        "name" : "SwiftCacheTests"
+      }
+    }
+  ],
+  "version" : 1
+}

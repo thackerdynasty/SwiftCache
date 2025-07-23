@@ -7,6 +7,7 @@
 import Foundation
 
 /// Non type-safe cache
+@available(*, deprecated, message: "Duplicates WrapperCache functionality. Use WrapperCache instead. This will be removed in version 2.0 of SwiftCache.")
 public struct UnsafeCache {
     private let cache: WrapperCache<AnyObject, AnyObject>
     

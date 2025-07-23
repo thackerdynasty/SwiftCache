@@ -15,9 +15,13 @@ public struct Cache<KeyType: Hashable, ObjectType> {
     
     /// Inserts an object into the cache.
     /// - Parameters:
-    ///     - object: The object to insert.
+    ///     - object: The object to insert. If nil, the cache is cleared at that point.
     ///     - key: The key to insert the object at.
-    public mutating func setObject(_ object: ObjectType, forKey key: KeyType) {
+    public mutating func setObject(_ object: ObjectType?, forKey key: KeyType) {
+        if object == nil {
+            cache.removeValue(forKey: key)
+            return
+        }
         cache[key] = object
     }
     
